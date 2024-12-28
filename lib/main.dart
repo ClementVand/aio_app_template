@@ -1,7 +1,6 @@
 import 'package:aio/aio.dart';
-
-import 'app/app_root.dart';
-import 'app/constants/routes.dart';
+import 'package:aio_app_template/app/app_root.dart';
+import 'package:aio_app_template/app/constants/routes.dart';
 
 void main() {
   App().run(

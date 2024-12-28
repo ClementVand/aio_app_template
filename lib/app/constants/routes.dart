@@ -1,9 +1,8 @@
 import 'package:aio/aio.dart';
+import 'package:aio_app_template/app/views/authentication/authentication_view.dart';
+import 'package:aio_app_template/app/views/main/main_view.dart';
+import 'package:aio_app_template/app/views/main/pages/home_view.dart';
 import 'package:flutter/material.dart';
-
-import '../views/authentication/authentication_view.dart';
-import '../views/main/main_view.dart';
-import '../views/main/pages/home_view.dart';
 
 /// A helper method to wrap the child with a [Material] widget.
 Widget _material(Widget child) => Material(

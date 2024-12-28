@@ -1,7 +1,6 @@
+import 'package:aio_app_template/app/constants/color_palette.dart';
+import 'package:aio_app_template/app/widgets/styled_text.dart';
 import 'package:flutter/material.dart';
-
-import '../constants/color_palette.dart';
-import 'styled_text.dart';
 
 class StyledButton extends StatelessWidget {
   const StyledButton({

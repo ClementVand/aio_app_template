@@ -1,7 +1,6 @@
 import 'package:aio/aio.dart';
+import 'package:aio_app_template/app/constants/routes.dart';
 import 'package:flutter/material.dart';
-
-import '../../constants/routes.dart';
 
 class AuthenticationView extends StatelessWidget {
   const AuthenticationView({super.key});

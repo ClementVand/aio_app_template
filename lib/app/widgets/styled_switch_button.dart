@@ -1,7 +1,6 @@
+import 'package:aio_app_template/app/constants/color_palette.dart';
+import 'package:aio_app_template/app/widgets/styled_text.dart';
 import 'package:flutter/material.dart';
-
-import '../constants/color_palette.dart';
-import 'styled_text.dart';
 
 /// A styled switch button.
 ///
@@ -46,33 +45,31 @@ class _StyledSwitchButtonState extends State<StyledSwitchButton> {
           color: colorPalette.surfaceColor,
           borderRadius: BorderRadius.circular(32),
         ),
-        child: LayoutBuilder(
-          builder: (context, constraints) {
-            return Stack(
-              children: [
-                AnimatedPositioned(
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                  left: _value ? constraints.maxWidth / 2 : 0,
-                  child: Container(
-                    width: constraints.maxWidth / 2,
-                    height: constraints.maxHeight,
-                    decoration: BoxDecoration(
-                      color: colorPalette.primaryColor,
-                      borderRadius: BorderRadius.circular(32),
-                    ),
+        child: LayoutBuilder(builder: (context, constraints) {
+          return Stack(
+            children: [
+              AnimatedPositioned(
+                duration: const Duration(milliseconds: 300),
+                curve: Curves.easeInOut,
+                left: _value ? constraints.maxWidth / 2 : 0,
+                child: Container(
+                  width: constraints.maxWidth / 2,
+                  height: constraints.maxHeight,
+                  decoration: BoxDecoration(
+                    color: colorPalette.primaryColor,
+                    borderRadius: BorderRadius.circular(32),
                   ),
                 ),
-                Row(
-                  children: [
-                    _buildSwitchButton(widget.labelOff, !_value),
-                    _buildSwitchButton(widget.labelOn, _value),
-                  ],
-                ),
-              ],
-            );
-          }
-        ),
+              ),
+              Row(
+                children: [
+                  _buildSwitchButton(widget.labelOff, !_value),
+                  _buildSwitchButton(widget.labelOn, _value),
+                ],
+              ),
+            ],
+          );
+        }),
       ),
     );
   }

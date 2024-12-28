@@ -1,6 +1,5 @@
+import 'package:aio_app_template/app/constants/color_palette.dart';
 import 'package:flutter/material.dart';
-
-import '../constants/color_palette.dart';
 
 class PageContainer extends StatelessWidget {
   const PageContainer({
