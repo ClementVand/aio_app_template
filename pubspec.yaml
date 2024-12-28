@@ -1,6 +1,7 @@
+# TODO: Replace with your package name
 name: aio_app_template
 
-# TODO: Replace this description
+# TODO: Replace with your description
 description: "Flutter app skeleton integrating AIO package"
 
 # The following line prevents the package from being accidentally published to
