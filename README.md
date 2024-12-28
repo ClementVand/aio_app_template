@@ -13,7 +13,7 @@ Flutter app skeleton integrating AIO package
 Rename your app with `flutter pub global run rename setAppName --targets ios,android --value "<YourAppName>"`<br>
 Change the bundle identifier with `flutter pub global run rename setBundleId --targets ios,android --value "com.example.bundleId"`
 
-* Rename all `import package:aio_app_template/...` to `import package:<your_package_name>/...`
+* Rename all `import 'package:aio_app_template/...'` to `import 'package:<your_package_name>/...'`
 
 * Run your app with `flutter run` or with the play button in your IDE
 
