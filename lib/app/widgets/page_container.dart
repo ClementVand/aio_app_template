@@ -1,29 +1,40 @@
 import 'package:aio_app_template/app/constants/color_palette.dart';
+import 'package:aio_app_template/app/widgets/page.layout.widget.dart';
 import 'package:flutter/material.dart';
 
+/// A container for a page layout.
+/// If [child] is provided, it will be used as the page layout.
+/// If [pageLayout] is provided, it will be used as the page layout.
 class PageContainer extends StatelessWidget {
-  const PageContainer({
+  PageContainer({
     super.key,
-    required this.child,
+    this.child,
+    this.pageLayout,
     this.backgroundColor,
     this.background,
     this.usePadding = true,
     this.useSafeArea = true,
-  });
+  }) {
+    assert(child != null || pageLayout != null);
+  }
 
-  final Widget child;
+  final Widget? child;
+  final PageLayout? pageLayout;
   final Color? backgroundColor;
   final Widget? background;
 
   final bool usePadding;
   final bool useSafeArea;
 
+  bool get hasLayout => pageLayout != null;
+
   @override
   Widget build(BuildContext context) {
+    final Widget child = pageLayout ?? this.child!;
     Widget widget = _withSafeArea(child);
 
     return Container(
-      padding: usePadding ? const EdgeInsets.all(32.0) : null,
+      padding: usePadding && !hasLayout ? const EdgeInsets.all(32.0) : null,
       color: backgroundColor ?? colorPalette.backgroundColor,
       child: _withBackground(widget),
     );

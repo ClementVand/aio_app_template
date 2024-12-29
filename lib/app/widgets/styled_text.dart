@@ -1,25 +1,33 @@
+import 'package:aio_app_template/app/constants/color_palette.dart';
 import 'package:flutter/material.dart';
 
+/// A styled text widget.
+///
+/// This widget is used to display text with a specific style.
+/// It provides a static method to get the style of a specific format.
+/// Useful when using [RichText] or [TextSpan] to unify the style texts.
 class StyledText extends StatelessWidget {
-  const StyledText(
+  StyledText(
     this.text, {
     super.key,
     required this.format,
     this.align = TextAlign.left,
-    this.color = Colors.black,
-  });
+    Color? color,
+  }) {
+    this.color = color ?? colorPalette.neutralColorDark;
+  }
 
   final String text;
   final TextFormat format;
   final TextAlign align;
-  final Color color;
+  late final Color? color;
 
   static TextStyle getStyle(TextFormat format, [Color color = Colors.black]) =>
       _textStyleMap[format]!.copyWith(color: color);
 
   @override
   Widget build(BuildContext context) {
-    TextStyle textStyle = getStyle(format, color);
+    TextStyle textStyle = getStyle(format, color!);
 
     return Text(
       text,
@@ -31,6 +39,7 @@ class StyledText extends StatelessWidget {
 
 enum TextFormat {
   xlSemibold,
+  mMedium,
   sSemiBold,
   xsBold,
   xsMedium,
@@ -40,6 +49,10 @@ final Map<TextFormat, TextStyle> _textStyleMap = {
   TextFormat.xlSemibold: const TextStyle(
     fontSize: 26,
     fontWeight: FontWeight.w600,
+  ),
+  TextFormat.mMedium: const TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.w500,
   ),
   TextFormat.sSemiBold: const TextStyle(
     fontSize: 17,

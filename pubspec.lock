@@ -6,7 +6,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: a29befb806a0c81157eb940b3347bf22466b5c98
+      resolved-ref: a81d5c699e5e25fa5389ecbcfc3c0bdeb3c8e73b
       url: "https://github.com/ClementVand/aio.git"
     source: git
     version: "0.0.1"
