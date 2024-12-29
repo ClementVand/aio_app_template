@@ -20,3 +20,4 @@ Change the bundle identifier with `flutter pub global run rename setBundleId --t
 ### Personalization
 * Change this README to describe your app
 * Search for `TODO` in the code and follow the instructions
+* Check the `addons` folder for additional features you can add to your app (feel free to delete the folder if you don't need them)
