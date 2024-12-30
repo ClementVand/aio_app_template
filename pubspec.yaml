@@ -43,7 +43,6 @@ dependencies:
       path: .
 
   # Common
-  flutter_svg: ^2.0.14
   provider: ^6.1.2
 
 dev_dependencies:
