@@ -1,7 +1,7 @@
 import 'package:aio/aio.dart';
 import 'package:flutter/painting.dart';
 
-final colorPalette = Palette(
+final colorPalette = ColorPalette(
   primarySwatch: const ColorSwatch(0xFF371F7D, {
     50: Color(0xFFEEECF2),
     100: Color(0xFFD7D2E5),
@@ -15,4 +15,8 @@ final colorPalette = Palette(
     900: Color(0xFF0B0619),
   }),
   neutralColor: const Color(0xFFFFFCFA),
+  iconColor: const ColorState(
+    defaultColor: Color(0xFFFFFCFA),
+    selectedColor: Color(0xFF371F7D),
+  ),
 );
